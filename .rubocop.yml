@@ -1,0 +1,25 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/{bundle,rails,rake,spring,webpack,webpack-dev-server,yarn}
+    - db/**/*
+    - node_modules/**/*
+    - script/**/*
+    - vendor/**/*
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - config/{spring.rb,puma.rb}
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  Exclude:
+    - config/{spring.rb,puma.rb}
+
+Layout/LineLength:
+  Max: 120
